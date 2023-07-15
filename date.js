@@ -12,19 +12,19 @@ days.forEach((element) => {
 let day1today = document.getElementsByClassName("tab-day-long")[0];
 console.log(day1today);
 let day2tomorrow = document.getElementsByClassName("tab-day-long")[1];
-let day3 = document.getElementsByClassName("tab-day-long")[2];
+// let day3 = document.getElementsByClassName("tab-day-long")[2];
 // console.log(day3.textContent);
 
-let day3text = day3.textContent.split("/")[0];
+// let day3text = day3.textContent.split("/")[0];
 // console.log(day3text);
 
-day1today.textContent =
-  "" + Number(day3text - 2) + "/" + day3.textContent.split("/")[1];
-day2tomorrow.textContent =
-  "" + Number(day3text - 1) + "/" + day3.textContent.split("/")[1];
+// day1today.textContent =
+//   "" + Number(day3text - 2) + "/" + day3.textContent.split("/")[1];
+// day2tomorrow.textContent =
+//   "" + Number(day3text - 1) + "/" + day3.textContent.split("/")[1];
 
 let date = moment();
 let currentDate = date.format("D/M");
 day1today.textContent = currentDate;
-day2tomorrow.textContent = currentDate.add(1, "day");
-console.log(currentDate); // "17/06/2022"
+day2tomorrow.textContent = date.add(1, "day").format("D/M");
+//console.log(currentDate);

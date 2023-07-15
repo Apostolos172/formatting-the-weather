@@ -10,7 +10,6 @@ days.forEach((element) => {
 });
 
 let day1today = document.getElementsByClassName("tab-day-long")[0];
-console.log(day1today);
 let day2tomorrow = document.getElementsByClassName("tab-day-long")[1];
 // let day3 = document.getElementsByClassName("tab-day-long")[2];
 // console.log(day3.textContent);

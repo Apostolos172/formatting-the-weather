@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  // height: 100%;
+  min-height: 100%;
+  padding: 40px;
+  font-size: 16px;
+  font-family: "Advent Pro", sans-serif;
+
+  a {
+    color: black;
+  }
+
+  body {
+    height: 100%;
+    min-height: 750px;
+    margin: 0;
+    // background-image: url("sky1.png");
+    background-image: url("https://uomdai19172.files.wordpress.com/2019/11/sky1.jpg?w=640");
+    background-image: url("https://uomdai19172.files.wordpress.com/2019/11/sunset1.jpg?w=1024");
+    background-image: url("https://uomdai19172.files.wordpress.com/2019/11/sea3.jpg?w=1024");
+    background-image: url("https://uomdai19172.files.wordpress.com/2019/11/sea5.jpg?w=1024");
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    column-gap: 25px;
+    row-gap: 25px;
+    grid-template-columns: auto auto auto auto auto;
+
+    div {
+      background-color: aliceblue;
+      background-color: rgba($color: green, $alpha: 0.7);
+      border-radius: 50px;
+      color: aliceblue;
+    }
+
+    .item1.header {
+      grid-column: 1 / 5;
+      // max-height: 150px;
+
+      h1,
+      h2 {
+        margin: 10px;
+        text-align: center;
+      }
+      h2 {
+        font-weight: normal;
+        font-size: 1.1rem;
+      }
+    }
+    .item2 {
+      grid-row: 1 / 4;
+      grid-column: 5 / 6;
+      min-width: 100px;
+      background-color: rgba($color: green, $alpha: 0);
+      background-image: url("https://uomdai19172.files.wordpress.com/2019/11/sunset.jpg?w=1024");
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      div {
+        background-color: rgba($color: green, $alpha: 0);
+        height: 100%;
+        text-align: center;
+        img {
+          width: 100%;
+          // height: 95%;
+          border-radius: inherit;
+        }
+        iframe {
+          width: 95%;
+          height: 95%;
+          border-radius: inherit;
+        }
+      }
+    }
+    .item3.aside {
+      grid-column: 1 / 2;
+      grid-row: 2 / 5;
+      min-width: 10rem;
+
+      background-image: url("media/images/KF51\ Panther.jpg");
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      img {
+      }
+    }
+    .item4.main {
+      grid-column: 2 / 5;
+      grid-row: 2 / 4;
+
+      p {
+        margin: 5%;
+      }
+
+      ol {
+        li {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .item5.footer {
+      grid-column: 2 / 6;
+      grid-row: 4 / 5;
+
+      div {
+        background-color: rgba($color: black, $alpha: 0.2);
+        width: 100%;
+        height: 85%;
+        padding: 1%;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+
+        div {
+          display: grid;
+          grid-template-columns: auto auto;
+          align-items: center;
+          justify-items: center;
+        }
+
+        span {
+          // display: block;
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+}
+
+.bg {
+  height: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    height: unset;
+    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    // margin-bottom: 50px;
+    body {
+      // background-position: center;
+      // background-repeat: space;
+      // background-size: contain;
+      grid-template-columns: auto;
+      gap: 25px;
+      .item1.header {
+        grid-column: 1 / 2;
+        //grid-row: 1/2;
+        min-height: 150px;
+      }
+      .item2 {
+        // grid-row: 1 / 4;
+        grid-column: 1 / 2;
+        grid-row: 4/5;
+        min-height: 400px;
+        min-width: unset;
+      }
+      .item3.aside {
+        grid-column: 1 / 2;
+        // grid-row: 2 / 5;
+        grid-row: 2/3;
+        min-height: 400px;
+        min-width: unset;
+      }
+      .item4.main {
+        grid-column: 1 / 2;
+        // grid-row: 2 / 4;
+        grid-row: 3/4;
+        min-height: 280px;
+      }
+      .item5.footer {
+        grid-column: 1 / 2;
+        //grid-row: 4 / 5;
+        grid-row: 5/6;
+        min-height: 150px;
+      }
+    }
+  }
+}
+
+/* to do check image in the background in small screens and place the containers one below the other */

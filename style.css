@@ -15,9 +15,6 @@ html body {
   height: 100%;
   min-height: 750px;
   margin: 0;
-  background-image: url("https://uomdai19172.files.wordpress.com/2019/11/sky1.jpg?w=640");
-  background-image: url("https://uomdai19172.files.wordpress.com/2019/11/sunset1.jpg?w=1024");
-  background-image: url("https://uomdai19172.files.wordpress.com/2019/11/sea3.jpg?w=1024");
   background-image: url("https://uomdai19172.files.wordpress.com/2019/11/sea5.jpg?w=1024");
   /* Center and scale the image nicely */
   background-position: center;
@@ -30,7 +27,7 @@ html body {
   grid-template-columns: auto auto auto auto auto;
 }
 html body div {
-  background-color: aliceblue;
+  background-color: green;
   background-color: rgba(0, 128, 0, 0.7);
   border-radius: 50px;
   color: aliceblue;
@@ -62,10 +59,6 @@ html body .item2 div {
   background-color: rgba(0, 128, 0, 0);
   height: 100%;
   text-align: center;
-}
-html body .item2 div img {
-  width: 100%;
-  border-radius: inherit;
 }
 html body .item2 div iframe {
   width: 95%;
@@ -115,13 +108,8 @@ html body .item5.footer div span {
   margin-left: 50px;
 }
 
-.bg {
-  height: 100%;
-}
-
 @media screen and (max-width: 900px) {
   html {
-    height: unset;
     padding: 10px;
     padding-top: 25px;
     padding-bottom: 50px;
@@ -151,10 +139,12 @@ html body .item5.footer div span {
     grid-row: 3/4;
     min-height: 280px;
   }
+  html body .item4.main ol li {
+    font-size: 1.2rem;
+  }
   html body .item5.footer {
     grid-column: 1/2;
     grid-row: 5/6;
     min-height: 150px;
   }
-}
-/* to do check image in the background in small screens and place the containers one below the other *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
